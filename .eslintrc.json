@@ -1,0 +1,29 @@
+{
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "plugins": [
+      "jest"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended" 
+    ],
+    "globals": {
+      "__dirname": "readonly",
+      "__webpack_exports__": "readonly",
+      "__webpack_require__": "readonly",
+      "__unused_webpack_module": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-unused-vars": ["warn", { "varsIgnorePattern": "^__.*$" }],
+      "no-undef": "error"
+    }
+  }
