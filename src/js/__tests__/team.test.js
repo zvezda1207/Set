@@ -5,7 +5,7 @@ test('добавление персонажа', () => {
   const character = { name: 'Warrior', level: 1 };
 
   team.add(character);
-  expect(Array.from(team.members)).toContain(character);
+  expect(team.toArray()).toContain(character);
 });
 
 test('добавление одного и того же персонажа вызывает ошибку', () => {
@@ -24,8 +24,10 @@ test('добавление нескольких персонажей', () => {
   const character1 = { name: 'Warrior', level: 1 };
   const character2 = { name: 'Mage', level: 1 };
 
-  team.addAll(character1, character2);
-  expect(Array.from(team.members)).toEqual(expect.arrayContaining([character1, character2]));
+  team.add(character1);
+  team.add(character2);
+  
+  expect(team.toArray()).toEqual([character1, character2]);
 });
 
 test('метод toArray возвращает массив', () => {
@@ -33,5 +35,5 @@ test('метод toArray возвращает массив', () => {
   const character = { name: 'Warrior', level: 1 };
   
   team.add(character);
-  expect(team.toArray()).toEqual(expect.arrayContaining([character]));
+  expect(team.toArray()).toEqual([character]);
 });

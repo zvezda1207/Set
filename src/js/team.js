@@ -1,8 +1,8 @@
 const { Array } = require("core-js");
 
 class Team { 
-    constructor()
-    { this.members = new Set();
+    constructor() {
+        this.members = new Set();
     } 
 
     add(character) {
