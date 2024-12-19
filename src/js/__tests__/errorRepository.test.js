@@ -20,6 +20,6 @@ test("должен возвращать 'Unknown error' для несущест�
 test("должен возвращать 'Unknown error', если коды ошибок не добавлены", () => {
     const emptyRepo = new ErrorRepository();
 
-    expect(emptyRepo.translate(123)).toBe('Unknown error');
+    expect(emptyRepo.translate(123)).toBe('Unknown error');  
 });
 

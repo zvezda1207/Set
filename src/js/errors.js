@@ -8,7 +8,7 @@ class ErrorRepository {
     }
 
     translate(code) {
-        return this.errors.get(code) || 'Unknown error';
+        return this.errors.get(code) || "Unknown error";
     }
 }
 
